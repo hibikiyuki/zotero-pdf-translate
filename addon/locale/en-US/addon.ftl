@@ -1,6 +1,7 @@
 service-huoshan=Huoshan🗝️
 service-googleapi=Google(API)
 service-google=Google
+service-gascustom=Custom GAS
 service-cnki=CNKI
 service-youdao=Youdao
 service-youdaozhiyun=Youdao Zhiyun🗝️

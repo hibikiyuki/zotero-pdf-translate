@@ -441,6 +441,20 @@ export const SERVICES: Readonly<Readonly<TranslateService>[]> = <const>[
     },
   },
   {
+    type: "sentence",
+    id: "gascustom", // 独自サービスID
+    defaultSecret: "", // デフォルトのシークレットは空
+    secretValidator(secret: string) {
+      // SecretがGASのウェブアプリURLであることを想定
+      const isValid = secret.startsWith("https://script.google.com/macros/s/");
+      return {
+        secret,
+        status: isValid,
+        info: isValid ? "Valid GAS URL" : "Please enter your Google Apps Script Web App URL.",
+      };
+    },
+  },
+  {
     type: "word",
     id: "bingdict",
   },

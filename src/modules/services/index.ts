@@ -109,6 +109,9 @@ export class TranslationServices {
     import("./claude").then(
       (e) => (this.claude = new TranslateTaskRunner(e.claude)),
     );
+    import("./gascustom").then(
+      (e) => (this.gascustom = new TranslateTaskRunner(e.default)),
+    );
   }
 
   public async runTranslationTask(
